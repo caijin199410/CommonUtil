@@ -206,12 +206,12 @@
     getGSFID                   : 获取GSF序列号
     getBluetoothMAC            : 获取蓝牙地址
     getPsuedoUniqueID          : Android设备物理唯一标识符
-    getFingerprint             : 构建标识,包括brand,name,device,version.release,id,version.incremental,type,tags这些信息
-    getHardware                ：获取硬件信息
-    getProduct                 ：获取产品信息
-    getDevice                  ：获取设备信息
-    getBoard                   ：获取主板信息
-    getRadioVersion            ：获取基带版本(无线电固件版本 Api14以上)
+    getFingerprint             : 构建标识,包括brand,name,device,version.release,id,version.incremental,type,tags这些信息
+    getHardware                ：获取硬件信息
+    getProduct                 ：获取产品信息
+    getDevice                  ：获取设备信息
+    getBoard                   ：获取主板信息
+    getRadioVersion            ：获取基带版本(无线电固件版本 Api14以上)
     getUA                      : 获取的浏览器指纹(User-Agent)
     getDensity                 : 获取得屏幕密度
     getGoogleAccounts          : 获取google账号
@@ -274,10 +274,10 @@
     getSizeDesc          : 获取大小的描述
     ip2int               : ip地址转换为10进制数
     gainUUID             : 获取UUID
-    phoneNoHide : 手机号码，中间4位星号替换
-    cardIdHide : 银行卡号，保留最后4位，其他星号替换
-    idHide : 身份证号，中间10位星号替换 
-    checkVehicleNo : 是否为车牌号（沪A88888）
+    phoneNoHide          : 手机号码，中间4位星号替换
+    cardIdHide           : 银行卡号，保留最后4位，其他星号替换
+    idHide               : 身份证号，中间10位星号替换 
+    checkVehicleNo       : 是否为车牌号（沪A88888）
     
 ## Wifi管理工具类 → [AppWifiHelperMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppWifiHelperMgr.java)
     isWifiEnabled     : Wifi状态
