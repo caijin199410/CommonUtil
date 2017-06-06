@@ -12,7 +12,7 @@
     remove  : 移除某个key值已经对应的值
     clear   : 清除所有数据
     contains: 查询某个key是否已经存在
-    getAll  : 返回所有的键值对<br>
+    getAll  : 返回所有的键值对
 ## 提供App数据清理工作的类 → [AppCleanMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppCleanMgr.java)
     cleanInternalCache   ： 清除本应用内部缓存数据
     cleanExternalCache   ： 清除本应用外部缓存数据
@@ -33,10 +33,32 @@
     addActivity           : 将Act纳入推栈集合中
     exitApp               : 退出栈中所有Activity
 ## 获取App应用版本信息 → [AppApplicationMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppApplicationMgr.java)
-    getAppName    : 获取本地apk的名称
-    getVersionName: 获取本地Apk版本名称
-    getVersionCode: 获取本地Apk版本号
-    getMetaData   : 根据key获取xml中Meta的值
+    getAppName             : 获取本地apk的名称
+    getVersionName         : 获取本地Apk版本名称
+    getVersionCode         : 获取本地Apk版本号
+    getMetaData            : 根据key获取xml中Meta的值
+    getAppIcon             : 获取应用图标
+    getAppFirstInstallTime : 获取应用第一次安装日期
+    getAppLastUpdateTime   : 获取应用更新日期
+    getAppSize             : 获取应用大小
+    getAppApk              : 获取应用apk文件
+    getAppInstaller        : 获取应用的安装市场
+    getAppSign             : 获取应用签名
+    getAppTargetSdkVersion : 获取应用兼容sdk
+    getAppUid              : 获取应用uid
+    getNumCores            : 获取Cpu内核数
+    getRootPermission      : 获得root权限
+    getAppPermissions      : 获取应用的所有权限
+    hasPermission          : 是否有权限
+    isInstalled            : 应用是否安装
+    installApk             : 安装应用
+    uninstallApk           : 卸载应用
+    isSystemApp            : 是否是系统应用
+    isServiceRunning       : 服务是否在运行
+    stopRunningService     : 停止服务
+    killProcesses          : 结束进程
+    runScript              : 运行脚本 
+    runApp                 : 启动应用
 ## 软键盘管理 → [AppKeyBoardMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppKeyBoardMgr.java)
     openKeybord      : 打卡软键盘
     closeKeybord     : 关闭软键盘
@@ -66,6 +88,7 @@
     getNetworkState   : 获取当前手机连接的网络类型
     isNetworkConnected: 判断网络是否连接
     openNetSetting    : 打开网络设置界面
+    is3gConnected     : 检测3G是否连接
 ## 手机管理工具类 → [AppPhoneMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppPhoneMgr.java)
     getInstance          : 单例对象
     getSDKVersionNumber  : 获取手机系统版本号
@@ -103,11 +126,10 @@
     openOfficeByWPS      : 调用WPS打开office文档
     isInstalledApp       : 判断是否安装指定包名的APP
     isExistActivity      : 判断是否存在指定的Activity
-    getBootTimeString    : 获取开机时间
-    printSystemInfo      : 打印系统信息
-    getNetType           : 获取网络类型
-    getNativePhoneNumber : 获取当前设置的电话号码
-    getMacAddress        : 获取 MAC 地址
+    getPhoneType         : 获取移动终端类型
+    isSimCardReady       : 判断sim卡是否准备好
+    getPhoneStatus       : 获取手机状态信息
+    getAllSMS            : 获取手机短信并保存到xml中
 ## 反射工具类 → [AppReflectionMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppReflectionMgr.java)
     getProperty          : 得到某个对象的公共属性
     getStaticProperty    : 得到某类的静态公共属性
@@ -128,6 +150,7 @@
     getStatusHeight         : 获得状态栏的高度
     getRealScreenHeight     : 获取整块屏幕的高度
     getNavigationAreaHeight : 获取虚拟按键区域的高度
+    getNavigationBarrH      : 获取导航栏高度
     snapShotWithStatusBar   : 获取当前屏幕截图，包含状态栏
     snapShotWithoutStatusBar: 获取当前屏幕截图，不包含状态栏
 ## 获取App应用系统基本信息 → [AppSysMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppSysMgr.java)
@@ -153,6 +176,45 @@
     getSysSampleSize           : 获取当前APP应用的SampleSize大小
     getVibrator                : 获取震动器对象
     getSysLocalIpAddress       : 获取手机IP地址
+    getAndroidID               : 获取AndroidID
+    getIMSI                    : 获取设备IMSI码 
+    getIP                      : 获取网络IP地址(优先获取wifi地址)
+    getWifiIP                  : 获取WIFI连接下的ip地址
+    getGPRSIP                  : 获取GPRS连接下的ip地址
+    getSerial                  : 获取设备序列号
+    getSIMSerial               : 获取SIM序列号
+    getMNC                     : 获取网络运营商 46000,46002,46007 中国移动,46001 中国联通,46003 中国电信
+    getCarrier                 : 获取网络运营商：中国电信,中国移动,中国联通
+    getModel                   : 获取硬件型号
+    getBuildBrand              : 获取编译厂商
+    getBuildHost               : 获取编译服务器主机
+    getBuildTags               : 获取描述Build的标签
+    getBuildTime               : 获取系统编译时间 
+    getBuildUser               : 获取系统编译作者
+    getBuildVersionRelease     : 获取编译系统版本(5.1)
+    getBuildVersionCodename    : 获取开发代号
+    getBuildVersionIncremental : 获取源码控制版本号
+    getBuildVersionSDK         : 获取编译的SDK
+    getBuildID                 : 获取修订版本列表(LMY47D)
+    getSupportedABIS           : CPU指令集
+    getManufacturer            : 获取硬件制造厂商
+    getBootloader              : 获取系统启动程序版本号
+    getDisplayVersion          : 获取系统版本号
+    getLanguage                : 获取语言
+    getCountry                 : 获取国家
+    getOSVersion               : 获取系统版本:5.1.1
+    getGSFID                   : 获取GSF序列号
+    getBluetoothMAC            : 获取蓝牙地址
+    getPsuedoUniqueID          : Android设备物理唯一标识符
+    getFingerprint             : 构建标识,包括brand,name,device,version.release,id,version.incremental,type,tags这些信息
+    getHardware                ：获取硬件信息
+    getProduct                 ：获取产品信息
+    getDevice                  ：获取设备信息
+    getBoard                   ：获取主板信息
+    getRadioVersion            ：获取基带版本(无线电固件版本 Api14以上)
+    getUA                      : 获取的浏览器指纹(User-Agent)
+    getDensity                 : 获取得屏幕密度
+    getGoogleAccounts          : 获取google账号
 ## 自定义Toast提示框 → [AppToastMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppToastMgr.java)
     shortToast            : 自定义Toast调用
     longToast             : 自定义Toast调用
@@ -198,7 +260,7 @@
     isPoint              : 验证是否是小数
     isBankNo             : 验证是否银行卡号
     isIDCard             : 验证身份证号码是否正确
-    isPeculiarStr        :判断是否有特殊字符
+    isPeculiarStr        : 判断是否有特殊字符
     isUserName           : 判断是否为用户名账号(规则如下：用户名由下划线或字母开头，由数字、字母、下划线、点、减号组成的4-32位字符)
     chineseLength        : 获取字符串中文字符的长度（每个中文算2个字符）
     strLength            : 获取字符串的长度
@@ -212,6 +274,11 @@
     getSizeDesc          : 获取大小的描述
     ip2int               : ip地址转换为10进制数
     gainUUID             : 获取UUID
+    phoneNoHide : 手机号码，中间4位星号替换
+    cardIdHide : 银行卡号，保留最后4位，其他星号替换
+    idHide : 身份证号，中间10位星号替换 
+    checkVehicleNo : 是否为车牌号（沪A88888）
+    
 ## Wifi管理工具类 → [AppWifiHelperMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppWifiHelperMgr.java)
     isWifiEnabled     : Wifi状态
     openWifi          : 打开wifi
@@ -244,6 +311,19 @@
     intToByte       : int转换为byte数组
     byteToInt       : byte数组转换为int
     saveDecimals    : 保留几位小数
+    nullOfString    : null转String
+    stringToByte    : String转Byte
+    stringToBoolean : String转Boolean
+    stringToInt     : String转Int
+    stringToShort   : String转Short
+    stringToDouble  : String转Double
+    intToString     : Int转String
+    doubleToLong    : Double转Long
+    doubleToInt     : Double转Int
+    longToDouble    : Long转Double
+    longToInt       : Long转Int
+    stringToLong    : String转Long
+    longToString    : Long转String
 ## 日期管理类 → [AppDateMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppDateMgr.java)
     todayYyyyMmDd         : 当天的年月日
     todayHhMmSs           : 当天的时分秒
