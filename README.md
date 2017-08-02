@@ -78,11 +78,16 @@
     killProcesses          : 结束进程
     runScript              : 运行脚本 
     runApp                 : 启动应用
+    getPackageName         : 获得包名
+    getApplicationMetaData : 获取application层级的metadata
+    
 ## 软键盘管理 → [AppKeyBoardMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppKeyBoardMgr.java)
     openKeybord      : 打卡软键盘
     closeKeybord     : 关闭软键盘
     TimerHideKeyboard: 通过定时器强制隐藏虚拟键盘
     isKeybord        : 输入法是否显示
+    hideInputMethod  : 隐藏输入法
+    showInputMethod  : 显示输入法
 ## 系统日志输出工具类 → [AppLogMessageMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppLogMessageMgr.java)
     isEnableDebug: 设置log总开关,debug模式(true:打印日志  false：不打印)
     i            : Info日志
@@ -157,6 +162,8 @@
     getWifiScanResults       : 获取wifi列表
     getScanResultsByBSSID    : 过滤扫描结果
     getWifiConnectionInfo    : 获取wifi连接信息
+    getProxy                 : 获得Proxy地址
+    
 ## 手机管理工具类 → [AppPhoneMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppPhoneMgr.java)
     getInstance          : 单例对象
     getSDKVersionNumber  : 获取手机系统版本号
@@ -198,6 +205,8 @@
     isSimCardReady       : 判断sim卡是否准备好
     getPhoneStatus       : 获取手机状态信息
     getAllSMS            : 获取手机短信并保存到xml中
+    isGpsEnabled         : Gps是否打开
+    
 ## 反射工具类 → [AppReflectionMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppReflectionMgr.java)
     getProperty          : 得到某个对象的公共属性
     getStaticProperty    : 得到某类的静态公共属性
@@ -208,19 +217,35 @@
     getByArray           : 得到数组中的某个元素
     GetClassListByPackage: 得到类的集合
 ## 获取本地指定资源信息 → [AppResourceMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppResourceMgr.java)
-    getStringByAssets: 根据本地Assets目录下资源名称，获取String数据信息
-    getListByAssets  : 根据本地Assets目录下资源名称，获取List集合信息
-    getStringByRaw   : 根据本地Raw目录下资源标识，获取String数据信息
-    getListByRaw     : 根据本地Raw目录下资源标识，获取List集合信息
+    getStringByAssets    : 根据本地Assets目录下资源名称，获取String数据信息
+    getListByAssets      : 根据本地Assets目录下资源名称，获取List集合信息
+    getStringByRaw       : 根据本地Raw目录下资源标识，获取String数据信息
+    getListByRaw         : 根据本地Raw目录下资源标识，获取List集合信息
+    getResourceId        : 根据资源名获得资源id
+    readBytesFromAssets  : 从assets目录下读取文件内容
+    readBytesFromRaw     : 从res/raw目录下读取文件内容
+    readStringFromAssets : 从assets目录读取文本
+    readStringFromRaw    : 从raw目录读取文本
+    getString            : 获得字符串
+    getColor             : 获得颜色
+    getDrawable          : 获得Drawable
+    
 ## 有关Android屏幕的工具类 → [AppScreenMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppScreenMgr.java)
-    getScreenWidth          : 获得屏幕宽度
-    getScreenHeight         : 获得屏幕高度
-    getStatusHeight         : 获得状态栏的高度
-    getRealScreenHeight     : 获取整块屏幕的高度
-    getNavigationAreaHeight : 获取虚拟按键区域的高度
-    getNavigationBarrH      : 获取导航栏高度
-    snapShotWithStatusBar   : 获取当前屏幕截图，包含状态栏
-    snapShotWithoutStatusBar: 获取当前屏幕截图，不包含状态栏
+    getScreenWidth           : 获得屏幕宽度
+    getScreenHeight          : 获得屏幕高度
+    getStatusHeight          : 获得状态栏的高度
+    getRealScreenHeight      : 获取整块屏幕的高度
+    getNavigationAreaHeight  : 获取虚拟按键区域的高度
+    getNavigationBarrH       : 获取导航栏高度
+    snapShotWithStatusBar    : 获取当前屏幕截图，包含状态栏
+    snapShotWithoutStatusBar : 获取当前屏幕截图，不包含状态栏
+    getTitleBarHeight        : 获得标题栏高度
+    getStatusBarHeight       : 获取通知栏高度
+    takeScreenShot           : 获取指定Activity的截屏，保存到png文件
+    savePic                  : 保存bitmap
+    captureWebView           : 截取webView快照(webView加载的整个内容的大小)
+    shoot                    : 截屏并保存
+    shootWebView             : 截屏并保存
 ## 获取App应用系统基本信息 → [AppSysMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppSysMgr.java)
     getSysClientOs             : 获得客户端操作系统名称
     getSysSdk                  : 获取当前操作系统的sdk版本
@@ -346,6 +371,10 @@
     cardIdHide           : 银行卡号，保留最后4位，其他星号替换
     idHide               : 身份证号，中间10位星号替换 
     checkVehicleNo       : 是否为车牌号（沪A88888）
+    isContinuousNum      : 判断字符串是否为连续数字 45678901等
+    isAlphaBetaString    : 是否是纯字母
+    isContinuousWord     : 判断字符串是否为连续字母 xyZaBcd等
+    isRealDate           : 是否是日期 20120506 共八位，前四位-年，中间两位-月，最后两位-日
     
 ## Wifi管理工具类 → [AppWifiHelperMgr](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/AppWifiHelperMgr.java)
     isWifiEnabled     : Wifi状态
@@ -405,41 +434,47 @@
     getWeekOfMonth        : 日期中某个月份的第几周
     getWeekOfYear         : 日期中某个年份的第几周
     dateTimeToTimeStamp   : 将年月日时分秒转成Long类型
-    timeStampToDateTime   : 将Long类型转成年月日时分秒
-    string2Date           : 将年月日时分秒转成Date类型
-    date2String           : 将Date类型转成年月日时分秒
-    dateIsBefore          : 比较日期
-    minutesBetweenTwoDate : 相差多少分钟
-    getChineseZodiac      : 获取日期中的生肖
-    getZodiac             : 获取日期中的星座
-    getNowDayOffset       : 获取日期
-    getTime               : 获取日期
-    forward               : 使日期倒一天
-    isLeapYear            : 判断平年闰年
-    getDaysOfMonth        : 计算某月的天数
-    secondsMorning        : 获取当天凌晨的秒数
-    secondsNight          : 获取第二天凌晨的秒数
-    isSameDay             : 判断某两天是不是同一天
-    formatFriendly        : 将日期格式化成友好的字符串：几分钟前、几小时前、几天前、几月前、几年前、刚刚
-    formatDateTime        : 将日期以yyyy-MM-dd HH:mm:ss格式化
-    formatDateTime        : 将日期以yyyy-MM-dd HH:mm:ss格式化
-    formatDateTime        : 将日期以yyyy-MM-dd HH:mm:ss格式化
-    parseDate             : 将日期字符串转成日期
-    gainCurrentDate       : 获取系统当前日期
-    compareDate           : 验证日期是否比当前日期早
-    addDateTime           : 对日期进行增加操作
-    subDateTime           : 对日期进行相减操作
-    formatDateForExcelDate: 格式化excel中的时间
-    formatDateForFileName : 将日期格式化作为文件名
-    formatDateSecond      : 格式化日期(精确到秒)
-    tempDateSecond        : 格式化日期(精确到秒)
-    tempDateSecond        : 格式化日期(精确到秒)
-    formatDateDay         : 格式化日期(精确到天)
-    formatDateDetailDay   : 式化日期(精确到天)
-    formatNumber          : double类型的数字保留两位小数（四舍五入）
-    formateDate           : 将字符串转换成日期
-    parseStringToDate     : 将字符日期转换成Date
-    formatDoubleNumber    : 将double日期转换成String
+    timeStampToDateTime     : 将Long类型转成年月日时分秒
+    string2Date             : 将年月日时分秒转成Date类型
+    date2String             : 将Date类型转成年月日时分秒
+    dateIsBefore            : 比较日期
+    minutesBetweenTwoDate   : 相差多少分钟
+    getChineseZodiac        : 获取日期中的生肖
+    getZodiac               : 获取日期中的星座
+    getNowDayOffset         : 获取日期
+    getTime                 : 获取日期
+    forward                 : 使日期倒一天
+    isLeapYear              : 判断平年闰年
+    getDaysOfMonth          : 计算某月的天数
+    secondsMorning          : 获取当天凌晨的秒数
+    secondsNight            : 获取第二天凌晨的秒数
+    isSameDay               : 判断某两天是不是同一天
+    formatFriendly          : 将日期格式化成友好的字符串：几分钟前、几小时前、几天前、几月前、几年前、刚刚
+    formatDateTime          : 将日期以yyyy-MM-dd HH:mm:ss格式化
+    formatDateTime          : 将日期以yyyy-MM-dd HH:mm:ss格式化
+    formatDateTime          : 将日期以yyyy-MM-dd HH:mm:ss格式化
+    parseDate               : 将日期字符串转成日期
+    gainCurrentDate         : 获取系统当前日期
+    compareDate             : 验证日期是否比当前日期早
+    addDateTime             : 对日期进行增加操作
+    subDateTime             : 对日期进行相减操作
+    formatDateForExcelDate  : 格式化excel中的时间
+    formatDateForFileName   : 将日期格式化作为文件名
+    formatDateSecond        : 格式化日期(精确到秒)
+    tempDateSecond          : 格式化日期(精确到秒)
+    tempDateSecond          : 格式化日期(精确到秒)
+    formatDateDay           : 格式化日期(精确到天)
+    formatDateDetailDay     : 式化日期(精确到天)
+    formatNumber            : double类型的数字保留两位小数（四舍五入）
+    formateDate             : 将字符串转换成日期
+    parseStringToDate       : 将字符日期转换成Date
+    formatDoubleNumber      : 将double日期转换成String
+    getTimeMillis           : 获得指定Date类型的毫秒数
+    getCurrentDayTimeMillis : 获得当前时间的毫秒数
+    convertMillisecond      : 将格式化过的时间串转换成毫秒
+    getDateInterval         : 得到两个日期的天数
+    compareTime             : 时间比较
+    
 ## 手机常用单位转换的辅助类 → [DensityUtils](https://github.com/AbrahamCaiJin/CommonUtilLibrary/blob/master/CommonUtil/src/main/java/com/jingewenku/abrahamcaijin/commonutil/DensityUtils.java)
     dip2px: 据手机的分辨率从 dip 的单位 转成为 px(像素)
     px2dip: 根据手机的分辨率从 px(像素) 的单位 转成为 dp
