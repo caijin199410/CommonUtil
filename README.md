@@ -844,7 +844,7 @@
 
 Gradle:
 ``` groovy
-compile 'com.abrahamcaijin.commonutil:CommonUtil:1.0.1'
+compile 'com.abrahamcaijin.commonutil:CommonUtil:1.0.2'
 
 ```
 Maven:
@@ -852,13 +852,13 @@ Maven:
 <dependency>
   <groupId>com.abrahamcaijin.commonutil</groupId>
   <artifactId>CommonUtil</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <type>pom</type>
 </dependency>
 ```
  Ivy:
 ``` groovy
-<dependency org='com.abrahamcaijin.commonutil' name='CommonUtil' rev='1.0.1'>
+<dependency org='com.abrahamcaijin.commonutil' name='CommonUtil' rev='1.0.2'>
   <artifact name='CommonUtil' ext='pom' ></artifact>
 </dependency>
 ```
